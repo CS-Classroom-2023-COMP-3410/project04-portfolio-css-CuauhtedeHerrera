@@ -1,0 +1,91 @@
+/* body section and Main Content */
+body {
+
+  background-color: #7c0000;
+  font-size: 45px;
+
+}
+
+/* Setting the grid layout, will change on the layout of the screen */
+.mainContent {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content image"
+    "navBar navBar"
+    "footer footer";
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 20px;
+
+}
+
+/*defining the basic item */
+.mainContent>div {
+  background-color: #3e0000;
+  border-radius: 20px;
+  border-style: dashed;
+  border-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+
+}
+
+.mainContent>div.header {
+  grid-area: header;
+  background-color: #3e0000;
+  color: #000000;
+  border-radius: 20px;
+  border-style: inset;
+  border-color: #ffffff;
+  font-size: 200px;
+  font-style: Courier;
+  text-align: center;
+}
+
+.mainContent>div.content {
+  grid-area: content;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.mainContent>div.image {
+  grid-area: image;
+}
+
+.mainContent> div.navBar {
+  grid-area: navBar;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.mainContent>div.footer {
+  grid-area: footer;
+  font-size: 3.5em;
+  border-style: inset
+}
+
+
+/* Media Change*/
+@media all and (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+
+  .mainContent {
+    display: grid;
+
+
+    grid-template-areas:
+      "header"
+      "content"
+      "image"
+      "navBar"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+
+  }
+
+}
+

@@ -1,0 +1,75 @@
+<html>
+<!-- Home Page -->
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="UTF-8">
+    <title> Cuauhte de Herrera Website </title>
+</head>
+
+<body>
+
+
+    <div class="mainContent">
+
+        <div class="header">
+            <h1> Welcome to Cuauhte's Website
+            </h1>
+        </div>
+        <div class="content">
+            <p>
+                Hello, My name is Cuauhte de Herrera. This is a basic webpage made for a Comp Sci class. Below there are
+                some random things added that you give you more infomation about me.
+                There are also links to other pages such as a contact page
+            </p>
+        </div>
+        <div class="image">
+            <img class="image " src="gallery/IMG_5304.jpg" alt="Cuauhte" />
+        </div>
+        <div class = "navBar">
+        <nav >
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    Navigate 
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item"  href="https://www.cs.du.edu/~cuadeher/">Home</a>
+                    <a class="navbar-item">About</a>
+                    <a class="navbar-item">About</a>
+                    <a class="navbar-item">About</a>
+                    <a class="navbar-item">About</a>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <div class="footer">
+            <p>
+                Made in 2025
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>
