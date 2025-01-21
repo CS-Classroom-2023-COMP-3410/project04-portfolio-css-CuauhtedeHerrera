@@ -8,11 +8,13 @@ body {
 
 /* Setting the grid layout, will change on the layout of the screen */
 .mainContent {
+  width: 100%;
   display: grid;
   grid-template-areas:
     "header header"
     "content image"
     "navBar navBar"
+    "menu menu"
     "footer footer";
   grid-template-columns: 3fr 1fr;
   grid-gap: 20px;
@@ -52,15 +54,94 @@ body {
   grid-area: image;
 }
 
-.mainContent> div.navBar {
+/*Code for the NavBar, due note I took some code from W3*/
+.mainContent>div.navBar {
   grid-area: navBar;
-  font-size: 3.5em;
-  text-align: center;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ba0000;
+  }
+
+  li {
+    float: left;
+    border-right: 1px solid #000000;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #7c0000;
+  }
+
+  .active {
+    background-color: #3e0000;
+  }
+}
+
+.mainContent>div.menu {
+  display: none;
+  grid-area: menu;
+
+  background-color: #3e0000;
+
+  color: white;
+  border-radius: 10px;
+
+  .topnav {
+    overflow: hidden;
+    background-color: #ba0000;
+    position: relative;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .topnav a {
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .topnav a.icon {
+    background: black;
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav a:hover {
+    background-color: #7c0000;
+    color: bl ack;
+  }
+
+  .active {
+    background-color: #ba0000;
+    color: rgb(0, 0, 0);
+  }
 }
 
 .mainContent>div.footer {
   grid-area: footer;
-  font-size: 3.5em;
+  font-size: 2em;
   border-style: inset
 }
 
@@ -70,7 +151,17 @@ body {
   body {
     font-size: 14px;
   }
-
+  .mainContent>div.header {
+    grid-area: header;
+    background-color: #3e0000;
+    color: #000000;
+    border-radius: 20px;
+    border-style: inset;
+    border-color: #ffffff;
+    font-size: 25px;
+    font-style: Courier;
+    text-align: center;
+  }
   .mainContent {
     display: grid;
 
@@ -80,11 +171,19 @@ body {
       "content"
       "image"
       "navBar"
+      "menu"
       "footer";
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 1px;
 
+  }
 
+  .mainContent>div.navBar {
+    display: none;
+  }
+
+  .mainContent>div.menu {
+    display: block;
   }
 
 }

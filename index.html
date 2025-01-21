@@ -28,47 +28,46 @@
             <img class="image " src="gallery/IMG_5304.jpg" alt="Cuauhte" />
         </div>
         <div class = "navBar">
-        <nav >
-            <div class="navbar-brand">
-                <a class="navbar-item">
-                    Navigate 
-                </a>
-            </div>
-            <div class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item"  href="https://www.cs.du.edu/~cuadeher/">Home</a>
-                    <a class="navbar-item">About</a>
-                    <a class="navbar-item">About</a>
-                    <a class="navbar-item">About</a>
-                    <a class="navbar-item">About</a>
-                </div>
-            </div>
-        </nav>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li style="float:right"><a href="#about">About</a></li>
+            </ul>
         </div>
-        <div class="footer">
-            <p>
-                Made in 2025
-            </p>
-        </div>
+
+    <div class="menu">
+
+            <!-- Code from W3, does use javascript. -->
+            <div class="topnav">
+              <a href="#home" class="active">Logo</a>
+              <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
     </div>
-
-
+    <div class = "footer">
+        <p>
+           Made in 2025 
+        </p>
+    </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            if ($navbarBurgers.length > 0) {
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
-                });
-            }
-        });
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
     </script>
 </body>
+
 
 
 
