@@ -1,25 +1,66 @@
 <html>
-    <head>
+
+<head>
     <!-- Contact me page -->
-    <h1 align = "center"> 
-     <title> Contact Me </title>
-    </head>
-    <body bgcolor = "DarkRed">
-        <div>
-        <h1> 
-        Contact Me
+    <h1 align="center">
+        <title> Contact Me </title>
+</head>
+
+<body bgcolor="DarkRed">
+    <div>
+        <h1 class="header">
+            Contact Me
         </h1>
+
+
+        <div class = "mainContent">
+            <form action="mailto:cdeherrera23@gmail.com" method="post" enctype="text/plain">
+                Name: <input type="text" name="name"><br>
+                Email: <input type="text" name="email"><br>
+                <input type="submit" value="Send">
+            </form>
         </div>
-        <div>
-        <form action="mailto:cdeherrera23@gmail.com" method="post" enctype="text/plain">
-            Name: <input type="text" name="name"><br>
-            Email: <input type="text" name="email"><br>
-            <input type="submit" value="Send">
-        </form>
+        <div class="navBar">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">aboutme</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li style="float:right"><a href="#about">Contact</a></li>
+            </ul>
         </div>
-        <div style="background-color: Cornsilk;">
-            <a href="https://www.cs.du.edu/~cuadeher/">Home Page </a>
+
+        <div class="menu">
+
+            <!-- Code from W3, does use javascript. -->
+            <div class="topnav">
+                <a href="#home" class="active">Logo</a>
+                <div id="myLinks">
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">Contact</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
-    </body>
+        <div class="footer">
+            <p>
+                Made in 2025
+            </p>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
 
 </html>
